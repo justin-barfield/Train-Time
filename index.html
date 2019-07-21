@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+    <title>Train Schedule</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <script defer src="assets/javascript/app.js"></script> -->
+
+</head>
+<body>
+    
+    <!-- Page container -->
+    <div class="container">
+
+        <!-- Header container -->
+        <div id="header" class="containter row rounded">
+
+            <!-- Main title -->
+            <h1 class="container row justify-content-center">Main title</h1>
+            
+            <!-- Subtitle -->
+            <h4 class="container row justify-content-center">Subtitle</h4>
+        </div>
+
+        <!-- Schedule container -->
+        <div id="schedule" class="containter row rounded">
+
+            <!-- Schedule head -->
+            <div id="current-schedule" class="section-head">
+                Current Train Schedule
+            </div>
+
+            <!-- Schedule chart -->
+            <table id="train-table" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Form container -->
+        <div id="form-area" class="containter row rounded">
+
+            <!-- Form head -->
+            <div id="add-train" class="section-head">
+                Add Train
+            </div>
+
+            <!-- Input form -->
+            <form >
+                <!-- Train name -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Train Name</label>
+                    <input type="text" class="form-control rounded" id="exampleInputEmail1">
+                </div>
+
+                <!-- Destination -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Destination</label>
+                    <input type="text" class="form-control rounded" id="exampleInputEmail1">
+                </div>
+
+                <!-- First train time -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">First Train Time (HH:mm - military time)</label>
+                    <input type="time" class="form-control rounded" id="exampleInputEmail1">
+                </div>
+
+                <!-- Frequency -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Frequency (min)</label>
+                    <input type="time" class="form-control rounded" id="exampleInputEmail1">
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+div {
+    border: 1px solid black;
+}
+
+li {
+    border: 1px solid black;
+}
+
+.section-head {
+    background-color: #337AB7;
+    padding: 5px;
+    width: 100%;
+}
+
+#list-div {
+    width: 100%;
+}
+
+.list-headers {
+    list-style: none;
+    float: left;
+    padding: 5px;
+}
+
+form {
+    width: 100%;
+}
+
+.btn {
+    background-color: #337AB7;
+}
