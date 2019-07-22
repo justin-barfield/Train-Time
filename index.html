@@ -22,6 +22,12 @@
     <!-- Moment.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script>
 
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+
+    <!-- Specific Firebase products we want (Database) -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
     <!-- Local JS -->
     <!-- <script defer src="assets/javascript/app.js"></script> -->
 
@@ -87,25 +93,25 @@
                 <!-- Train name -->
                 <div class="form-group">
                     <label for="exampleInputEmail1">Train Name</label>
-                    <input type="text" class="form-control rounded" id="exampleInputEmail1">
+                    <input type="text" class="form-control rounded" id="input-train-name">
                 </div>
 
                 <!-- Destination -->
                 <div class="form-group">
                     <label for="exampleInputEmail1">Destination</label>
-                    <input type="text" class="form-control rounded" id="exampleInputEmail1">
+                    <input type="text" class="form-control rounded" id="input-destination">
                 </div>
 
                 <!-- First train time -->
                 <div class="form-group">
                     <label for="exampleInputEmail1">First Train Time (HH:mm - military time)</label>
-                    <input type="time" class="form-control rounded" id="exampleInputEmail1">
+                    <input type="time" class="form-control rounded" id="input-first-time">
                 </div>
 
                 <!-- Frequency -->
                 <div class="form-group">
                     <label for="exampleInputEmail1">Frequency (min)</label>
-                    <input type="time" class="form-control rounded" id="exampleInputEmail1">
+                    <input type="time" class="form-control rounded" id="input-frequency">
                 </div>
 
                 <!-- Submit -->
@@ -133,7 +139,18 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
+    var database = firebase.database();
 
+    $(document).on('click', 'button', function() {
+        event.preventDefault();
+
+        var trainName = $('#input-train-name').val();
+        var destination = $('#input-destination').val();
+        var firstTime = $('#input-first-time').val();
+        var frequency = $('#input-frequency').val();
+
+        
+    })
 
 
 
