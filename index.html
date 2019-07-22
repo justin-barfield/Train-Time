@@ -4,43 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- JQuery -->
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
 
-    <title>Train Schedule</title>
+    <!-- Local CSS -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Moment.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script>
+
+    <!-- Local JS -->
     <!-- <script defer src="assets/javascript/app.js"></script> -->
+
+    <title>Train Schedule</title>
 
 </head>
 <body>
     
     <!-- Page container -->
-    <div class="container">
+    <div id="page-container" class="container">
 
         <!-- Header container -->
-        <div id="header" class="containter row rounded">
+        <div id="header" class="containter row rounded-bottom">
 
             <!-- Main title -->
-            <h1 class="container row justify-content-center">Main title</h1>
+            <h1 class="container row justify-content-center">Train schedule</h1>
             
             <!-- Subtitle -->
-            <h4 class="container row justify-content-center">Subtitle</h4>
+            <h4 class="container row justify-content-center">Add and remove train schedules!</h4>
         </div>
 
         <!-- Schedule container -->
-        <div id="schedule" class="containter row rounded">
+        <div id="schedule" class="containter row rounded section-border">
 
             <!-- Schedule head -->
             <div id="current-schedule" class="section-head">
                 Current Train Schedule
             </div>
 
-            <!-- Schedule chart -->
+            <!-- Schedule table -->
             <table id="train-table" class="table table-striped">
                 <thead>
                     <tr>
@@ -64,7 +75,7 @@
         </div>
 
         <!-- Form container -->
-        <div id="form-area" class="containter row rounded">
+        <div id="form-area" class="containter row rounded  section-border">
 
             <!-- Form head -->
             <div id="add-train" class="section-head">
@@ -102,6 +113,40 @@
             </form>
         </div>
     </div>
+
+
+
+<script>
+
+    var log = console.log
+
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyA7AMzfI1UVu1vR8UAh-RWuLda4Eb4_VlQ",
+    authDomain: "train-time-b1943.firebaseapp.com",
+    databaseURL: "https://train-time-b1943.firebaseio.com",
+    projectId: "train-time-b1943",
+    storageBucket: "train-time-b1943.appspot.com",
+    messagingSenderId: "322405426096",
+    appId: "1:322405426096:web:26d3fc34ce3d7d91"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
 
     
 </body>
